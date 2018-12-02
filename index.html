@@ -1,0 +1,52 @@
+<!doctype html>
+<html style="font-family: 'Roboto', sans-serif;" lang="en">
+    <head>
+		<title>Aubay - Pure JS</title>
+        
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+		<script src="js/main.js"></script>
+        
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+		<link type="text/css" rel="stylesheet" href="css/main.css?v=1.1">
+        
+    </head>
+    <body>
+        <header class="shadowed">
+            <h2>Aubay</h2>
+        </header>
+        <main>
+            <div id="login-box" class="shadowed">
+                <header class="login-box-header">
+                    <div class="text">
+                        <h4>Log in to our site</h4>
+                        <h6>Enter username and password to log on.</h6>
+                        
+                    </div>
+                    <div class="lock">
+                        <i class="fas fa-lock fa-3x"></i>
+                    </div>
+                </header>
+                <div id="form-fields">
+                    
+                    <!-- Ideally all forms should have <label> tags to help in accessibility issues - but it's not how this form was designed so I didn't include. -->
+                    <form id="login-form">
+                        <input id="username" type="text" placeholder="USERNAME" role="form" aria-required="true">
+                        <input id="password" type="password" placeholder="PASSWORD" role="form" aria-required="true">
+                        <button type="button" onclick="login()">Sign in</button>
+                    </form>
+                    <h6 class="signup">Don't have an account? <a href="" title="Sign up link">Sign up here.</a></h6>
+                </div>
+            </div>
+            <div id="welcome-screen" class="hidden">
+                <h1>Welcome, Mr. Test!</h1>
+                <h2>You are the greatest user in the galaxy!</h2>
+            </div>
+        </main>
+        <footer>
+            <h4>Feito por Felipe Zanon do Nascimento</h4>
+        </footer>
+    </body>
+</html>

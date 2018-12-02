@@ -1,0 +1,137 @@
+h1, h2, h3, h4, h5, h6 {
+    padding: 0;
+    margin: 0;
+    font-weight: normal;
+}
+button { 
+    cursor: pointer; 
+}
+button:hover {
+    opacity: 0.9;
+}
+
+a {
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;    
+}
+
+header, footer {
+    height: 85px;
+    background-color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+main {
+    display: flex;
+    flex-grow: 1;
+    width: 100vw;
+    background-color:#757ec9;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.shadowed {
+    filter: drop-shadow(-2px 3px 5px rgba(0,0,0,0.3));
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #AAA;
+    opacity: 1; /* Firefox */
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: #AAA;
+}
+
+#login-box {
+    background-color: #516497;
+    width: 100vw;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+}
+
+.login-box-header {
+    background-color: #3f5f89;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-start;
+    box-sizing: border-box;
+}
+.lock {
+    margin-left: auto;
+}
+
+#form-fields {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+#form-fields form {
+    width: 100%;
+}
+#form-fields input, button {
+    width: 100%;
+    height: 42px;
+    margin: 12px 0;
+    padding: 10px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    border: 0;
+}
+
+#form-fields button {
+    background-color: #18b9e7;
+    color: #FFF;
+}
+
+.signup {
+    color: #FFF;
+}
+
+#welcome-screen {
+    padding: 20px;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(../img/bg.gif);
+    color: #FFF;
+    
+}
+
+@media screen and (min-width:768px) {
+    #login-box {
+        width: 450px;
+    }
+}
