@@ -1,36 +1,37 @@
-$(document).on("keyup",function(e){
+window.addEventListener("keypress", formHandler, false);
 
-    let username = $("#username").val();
-    let password = $("#password").val();
+function formHandler(e) {
+    let username = document.querySelector("#username").value;
+    let password = document.querySelector("#password").value;
+    
+    let button = document.querySelector("#button");
 
     if (!username || !password) {
-        $("#button").prop('disabled', true);
+        button.setAttribute("disabled");
         return;
     }
-
-    $("#button").prop('disabled', false);
+    button.removeAttribute("disabled");
 
     if(e.key === "Enter")
-        login();
-
-});
-
+        (function() {
+            login()
+        })();
+};
 
 function login() {
-    let username = $("#username").val();
-    let password = $("#password").val();
+    let username = document.querySelector("#username").value;
+    let password = document.querySelector("#password").value;
+    let loginBox = document.querySelector("#login-box");
+    let welcomeScreen = document.querySelector("#welcome-screen");
     
     // Correct username and password are explicit here as requested for this test.
-    if (username === "test" && password === "123") {
-        $("#login-box").addClass("hidden");
-        $("#welcome-screen").removeClass("hidden");
-    }
-    else {
-        $("#login-box").addClass("shake");
+    if (username === "test" && password === "123") {        
+        loginBox.classList.add("hidden");
+        welcomeScreen.classList.remove("hidden");
+    } else {
+        loginBox.classList.add("shake");
         setTimeout(function () {
-            $('#login-box').removeClass("shake");
+            loginBox.classList.remove("shake");
         }, 1000);
-
     }
-
 }
